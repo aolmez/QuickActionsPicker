@@ -10,8 +10,15 @@ screenshot](https://github.com/karabatov/QuickActionsPicker/blob/master/screensh
 * Open `QuickActionsPicker.xcworkspace`
 * No signing or team necessary to run on the simulator
 
+### Source code guidance
+* `QuickActionsPicker.swift` – source for the control.
+* `ActionSheetPickerExtension.swift` – extension to attach the panel to
+    `ActionSheetPicker-3.0` instance.
+* `ViewController.swift` – sample of how to use the control.
+
 ### Features
-* Supports, but does not require `ActionSheetPicker-3.0`, via extension.
+* Supports, but does not require `ActionSheetPicker-3.0`, via extension. Note
+    that it only works on iPhone.
 * Displays up to 4 items horizontally.
 * Provides an auto-sizing panel which you can put anywhere with left, right and
     bottom Auto Layout anchors.
