@@ -58,6 +58,7 @@ final class QuickActionsPicker: UIView {
             let button = UIButton(type: UIButton.ButtonType.custom)
             button.setAttributedTitle(attrTitle, for: UIControl.State.normal)
             button.addTarget(self, action: #selector(QuickActionsPicker.buttonTapped(sender:)), for: UIControl.Event.touchUpInside)
+            button.contentEdgeInsets = UIEdgeInsets(top: 8.0, left: 8.0, bottom: 8.0, right: 8.0)
             button.tag = idx
             actionStack.addArrangedSubview(button)
 
