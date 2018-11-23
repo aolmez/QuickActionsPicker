@@ -8,6 +8,8 @@
 
 import UIKit
 
+/// QuickActionsPicker creates a small panel which can be attached anywhere
+/// that resembles a quick type Apple's panel seen on top of a keyboard.
 final class QuickActionsPicker: UIView {
     /// When an action is selected, we return the underlying item. The user
     /// is then free to convert it back to an object of their choice.
@@ -26,6 +28,12 @@ final class QuickActionsPicker: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    /// Creates a new instance of QuickActionsPicker.
+    ///
+    /// - Parameter items: Data items to display. May be any data type convertible to a string. Only 4 will be displayed!
+    /// - Parameter separator: A character to use as a separator between items. Will use the same font attributes.
+    /// - Parameter fontAttributes: Font attributes to apply to `items` and `separator`. By default the font is white.
+    /// - Parameter actionSelected: A callback when one of the items is tapped. Provides the picker reference and the item.
     required init(items: [CustomStringConvertible], separator: Character = "|", fontAttributes: [NSAttributedString.Key: Any]? = nil, actionSelected: ActionSelected?) {
         // Only take a maximum of four items (more would likely not fit).
         self.items = Array(items.prefix(4))
