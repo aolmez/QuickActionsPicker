@@ -57,6 +57,7 @@ final class QuickActionsPicker: UIView {
             if !actionStack.arrangedSubviews.isEmpty {
                 let sepLabel = UILabel()
                 sepLabel.attributedText = attrSeparator
+                // Make sure the separator label doesn't get stretched along with the buttons.
                 sepLabel.setContentHuggingPriority(UILayoutPriority.defaultHigh, for: NSLayoutConstraint.Axis.horizontal)
                 actionStack.addArrangedSubview(sepLabel)
             }
