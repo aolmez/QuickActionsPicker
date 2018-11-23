@@ -18,23 +18,13 @@ final class ViewController: UIViewController {
 
     @IBAction func buttonTapped() {
         let rows = ["10 g", "100 g"]
-
-        let asPicker = ActionSheetStringPicker.init(
-            title: "Tomato",
-            rows: rows,
-            initialSelection: 1,
-            doneBlock: { [weak self] picker, index, value in
-                self?.button.setTitle(rows[index], for: UIControl.State.normal)
-            },
-            cancel: nil,
-            origin: button
-        )
-
         let quickActions = ["10 g", "20 g", "50 g", "200 g"]
         let attrs = [
             NSAttributedString.Key.foregroundColor: UIColor.white,
             NSAttributedString.Key.font: UIFont(name: "Avenir", size: UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body).pointSize) as Any
         ]
+
+        var asPicker: ActionSheetStringPicker?
 
         let quickPanel = QuickActionsPicker(items: quickActions, separator: "|", fontAttributes: attrs) { [weak self] qap, item in
             self?.button.setTitle(String(describing: item), for: UIControl.State.normal)
@@ -45,6 +35,20 @@ final class ViewController: UIViewController {
             asPicker?.hideWithCancelAction()
         }
         quickPanel.backgroundColor = UIColor.lightGray
+
+        asPicker = ActionSheetStringPicker.init(
+            title: "Tomato",
+            rows: rows,
+            initialSelection: 1,
+            doneBlock: { [weak self] picker, index, value in
+                quickPanel.isHidden = true
+                self?.button.setTitle(rows[index], for: UIControl.State.normal)
+            },
+            cancel: { picker in
+                quickPanel.isHidden = true
+            },
+            origin: button
+        )
 
         quickPanel.attachAndShow(picker: asPicker)
     }
