@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		64BCB88D39EC23863079BB78 /* Pods_QuickActionsPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7E0FA71250C9F0CF27D373 /* Pods_QuickActionsPicker.framework */; };
 		D169D9AE21A8422F005EDA94 /* ActionSheetPickerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D169D9AD21A8422F005EDA94 /* ActionSheetPickerExtension.swift */; };
+		D169D9B121A8629B005EDA94 /* QuickActionsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D169D9B021A8629B005EDA94 /* QuickActionsPicker.swift */; };
 		D1F07CFB21A838F900FE83AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F07CFA21A838F900FE83AF /* AppDelegate.swift */; };
 		D1F07CFD21A838F900FE83AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F07CFC21A838F900FE83AF /* ViewController.swift */; };
 		D1F07D0021A838F900FE83AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1F07CFE21A838F900FE83AF /* Main.storyboard */; };
@@ -19,7 +20,8 @@
 /* Begin PBXFileReference section */
 		24CC8AD877EBF1CCAB333C98 /* Pods-QuickActionsPicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickActionsPicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickActionsPicker/Pods-QuickActionsPicker.debug.xcconfig"; sourceTree = "<group>"; };
 		6F1CB91C1321668BA020D785 /* Pods-QuickActionsPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickActionsPicker.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickActionsPicker/Pods-QuickActionsPicker.release.xcconfig"; sourceTree = "<group>"; };
-		D169D9AD21A8422F005EDA94 /* ActionSheetPickerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ActionSheetPickerExtension.swift; path = CoreQuickActionsPicker/ActionSheetPickerExtension.swift; sourceTree = "<group>"; };
+		D169D9AD21A8422F005EDA94 /* ActionSheetPickerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheetPickerExtension.swift; sourceTree = "<group>"; };
+		D169D9B021A8629B005EDA94 /* QuickActionsPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuickActionsPicker.swift; path = CoreQuickActionsPicker/QuickActionsPicker.swift; sourceTree = "<group>"; };
 		D1F07CF721A838F800FE83AF /* QuickActionsPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickActionsPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F07CFA21A838F900FE83AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1F07CFC21A838F900FE83AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,7 +56,7 @@
 		D169D9AF21A84237005EDA94 /* CoreActionSheetPicker */ = {
 			isa = PBXGroup;
 			children = (
-				D169D9AD21A8422F005EDA94 /* ActionSheetPickerExtension.swift */,
+				D169D9B021A8629B005EDA94 /* QuickActionsPicker.swift */,
 			);
 			name = CoreActionSheetPicker;
 			sourceTree = "<group>";
@@ -81,6 +83,7 @@
 		D1F07CF921A838F800FE83AF /* QuickActionsPicker */ = {
 			isa = PBXGroup;
 			children = (
+				D169D9AD21A8422F005EDA94 /* ActionSheetPickerExtension.swift */,
 				D1F07CFA21A838F900FE83AF /* AppDelegate.swift */,
 				D1F07CFC21A838F900FE83AF /* ViewController.swift */,
 				D1F07CFE21A838F900FE83AF /* Main.storyboard */,
@@ -214,6 +217,7 @@
 				D1F07CFD21A838F900FE83AF /* ViewController.swift in Sources */,
 				D1F07CFB21A838F900FE83AF /* AppDelegate.swift in Sources */,
 				D169D9AE21A8422F005EDA94 /* ActionSheetPickerExtension.swift in Sources */,
+				D169D9B121A8629B005EDA94 /* QuickActionsPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
