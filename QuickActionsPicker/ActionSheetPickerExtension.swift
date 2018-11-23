@@ -1,3 +1,11 @@
+//
+//  ActionSheetPickerExtension.swift
+//  QuickActionsPicker
+//
+//  Created by Yuri Karabatov on 23/11/2018.
+//  Copyright © 2018 Yuri Karabatov. All rights reserved.
+//
+
 import ActionSheetPicker_3_0
 
 extension QuickActionsPicker {
