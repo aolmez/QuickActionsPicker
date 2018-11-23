@@ -37,7 +37,7 @@ final class ViewController: UIViewController {
             // Tapping on a quick action is equivalent to dismissing the picker.
             asPicker?.hideWithCancelAction()
         }
-        quickPanel.backgroundColor = UIColor.darkGray
+        quickPanel.backgroundColor = UIColor.lightGray
 
         quickPanel.attachAndShow(picker: asPicker)
     }
