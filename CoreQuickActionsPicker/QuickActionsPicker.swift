@@ -70,6 +70,7 @@ final class QuickActionsPicker: UIView {
     }
 
     @objc func buttonTapped(sender: UIButton) {
+        print("button")
         guard
             // Make sure that it's our button, because the method is public.
             sender.superview == actionStack,

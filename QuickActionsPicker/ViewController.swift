@@ -43,15 +43,18 @@ final class ViewController: UIViewController {
         // Picker subviews are created only after we try to show it.
         picker.show()
 
-        // We will add our panel to the toolbar's superview and constrain it
-        // to the top of the toolbar.
-        guard let canvas = picker.toolbar.superview else { return }
+        guard
+            /// The container view of the picker to which we will align.
+            let masterView = picker.toolbar.superview,
+            /// The canvas view of the picker where we'll add quick actions as subview.
+            let canvas = masterView.superview
+        else { return }
 
         canvas.addSubview(quickPanel)
         canvas.addConstraints([
-            quickPanel.bottomAnchor.constraint(equalTo: picker.toolbar.topAnchor),
-            quickPanel.leftAnchor.constraint(equalTo: picker.toolbar.leftAnchor),
-            quickPanel.rightAnchor.constraint(equalTo: picker.toolbar.rightAnchor)
+            quickPanel.bottomAnchor.constraint(equalTo: masterView.topAnchor, constant: canvas.frame.origin.y),
+            quickPanel.leftAnchor.constraint(equalTo: masterView.leftAnchor),
+            quickPanel.rightAnchor.constraint(equalTo: masterView.rightAnchor)
         ])
     }
 }
