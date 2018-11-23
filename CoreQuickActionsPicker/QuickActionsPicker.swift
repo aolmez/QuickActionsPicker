@@ -69,8 +69,9 @@ final class QuickActionsPicker: UIView {
         ])
     }
 
+    /// I would usually use RxSwift for button taps because then
+    /// there is no need to expose an `@objc` func. You can't make it private!
     @objc func buttonTapped(sender: UIButton) {
-        print("button")
         guard
             // Make sure that it's our button, because the method is public.
             sender.superview == actionStack,

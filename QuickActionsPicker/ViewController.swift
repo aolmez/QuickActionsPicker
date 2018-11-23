@@ -30,32 +30,16 @@ final class ViewController: UIViewController {
             origin: button
         )
 
-        guard let picker = asPicker else { return }
-
         let quickActions = ["10 g", "20 g", "50 g", "200 g"]
 
         let quickPanel = QuickActionsPicker(items: quickActions) { [weak self] item in
             self?.button.setTitle(String(describing: item), for: UIControl.State.normal)
+            // Tapping on a quick action is equivalent to dismissing the picker.
+            asPicker?.hideWithCancelAction()
         }
-        quickPanel.backgroundColor = UIColor.red
-        quickPanel.translatesAutoresizingMaskIntoConstraints = false
+        quickPanel.backgroundColor = UIColor.darkGray
 
-        // Picker subviews are created only after we try to show it.
-        picker.show()
-
-        guard
-            /// The container view of the picker to which we will align.
-            let masterView = picker.toolbar.superview,
-            /// The canvas view of the picker where we'll add quick actions as subview.
-            let canvas = masterView.superview
-        else { return }
-
-        canvas.addSubview(quickPanel)
-        canvas.addConstraints([
-            quickPanel.bottomAnchor.constraint(equalTo: masterView.topAnchor, constant: canvas.frame.origin.y),
-            quickPanel.leftAnchor.constraint(equalTo: masterView.leftAnchor),
-            quickPanel.rightAnchor.constraint(equalTo: masterView.rightAnchor)
-        ])
+        quickPanel.attachAndShow(picker: asPicker)
     }
 }
 
