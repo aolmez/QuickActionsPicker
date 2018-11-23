@@ -45,7 +45,7 @@ final class QuickActionsPicker: UIView {
 
         let attrSeparator = NSAttributedString(string: separator, attributes: fontAttributes)
 
-        for (idx, action) in items.prefix(4).enumerated() {
+        for (idx, action) in items.enumerated() {
             if !actionStack.arrangedSubviews.isEmpty {
                 let sepLabel = UILabel()
                 sepLabel.attributedText = attrSeparator

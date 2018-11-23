@@ -17,7 +17,13 @@ final class ViewController: UIViewController {
     }
 
     @IBAction func buttonTapped() {
-        let rows = ["10 g", "100 g"]
+        var rows = [String]()
+        for num in stride(from: 10, through: 95, by: 5) {
+            rows.append("\(num) g")
+        }
+        for num in stride(from: 100, through: 200, by: 10) {
+            rows.append("\(num) g")
+        }
         let quickActions = ["10 g", "20 g", "50 g", "200 g"]
         let attrs = [
             NSAttributedString.Key.foregroundColor: UIColor.white,
@@ -39,7 +45,7 @@ final class ViewController: UIViewController {
         asPicker = ActionSheetStringPicker.init(
             title: "Tomato",
             rows: rows,
-            initialSelection: 1,
+            initialSelection: 18,
             doneBlock: { [weak self] picker, index, value in
                 quickPanel.isHidden = true
                 self?.button.setTitle(rows[index], for: UIControl.State.normal)
