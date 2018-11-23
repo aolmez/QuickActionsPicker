@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import ActionSheetPicker_3_0
 
-class ViewController: UIViewController {
+final class ViewController: UIViewController {
+    @IBOutlet private var button: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func buttonTapped() {
+        ActionSheetStringPicker.displayFrom(button)
+    }
 }
 
