@@ -54,7 +54,7 @@ final class ViewController: UIViewController {
             origin: button
         )
 
-        /// Quick Panel Picker's extension for ActionSheetPicker in action.
+        /// Quick Actions Picker's extension for ActionSheetPicker in action.
         quickPanel.attachAndShow(picker: asPicker)
     }
 }
