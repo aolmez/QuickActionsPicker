@@ -31,9 +31,16 @@ final class ViewController: UIViewController {
         )
 
         let quickActions = ["10 g", "20 g", "50 g", "200 g"]
+        let attrs = [
+            NSAttributedString.Key.foregroundColor: UIColor.white,
+            NSAttributedString.Key.font: UIFont(name: "Avenir", size: UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body).pointSize) as Any
+        ]
 
-        let quickPanel = QuickActionsPicker(items: quickActions) { [weak self] item in
+        let quickPanel = QuickActionsPicker(items: quickActions, separator: "|", fontAttributes: attrs) { [weak self] qap, item in
             self?.button.setTitle(String(describing: item), for: UIControl.State.normal)
+            // We probably want to hide the quick actions picker for now
+            // because it doesn't animate too well along the action sheet.
+            qap.isHidden = true
             // Tapping on a quick action is equivalent to dismissing the picker.
             asPicker?.hideWithCancelAction()
         }

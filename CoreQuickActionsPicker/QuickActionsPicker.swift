@@ -11,7 +11,7 @@ import UIKit
 final class QuickActionsPicker: UIView {
     /// When an action is selected, we return the underlying item. The user
     /// is then free to convert it back to an object of their choice.
-    typealias ActionSelected = (CustomStringConvertible) -> Void
+    typealias ActionSelected = (QuickActionsPicker, CustomStringConvertible) -> Void
 
     private let actionStack = UIStackView()
 
@@ -86,7 +86,7 @@ final class QuickActionsPicker: UIView {
             return
         }
 
-        actionSelected?(items[sender.tag])
+        actionSelected?(self, items[sender.tag])
     }
 
     private static func defaultFontAttributes() -> [NSAttributedString.Key: Any] {
