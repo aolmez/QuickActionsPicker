@@ -18,25 +18,19 @@ final class ViewController: UIViewController {
 
     @IBAction func buttonTapped() {
         let rows = ["10 g", "100 g"]
+
         ActionSheetStringPicker.show(
             withTitle: "Tomato",
             rows: rows,
             initialSelection: 1,
-            target: self,
-            successAction: #selector(ViewController.pickerSuccessAction),
-            cancelAction: #selector(ViewController.pickerCancelAction),
+            doneBlock: { [weak self] picker, index, value in
+                self?.button.setTitle(rows[index], for: UIControl.State.normal)
+            },
+            cancel: { picker in
+                // Do nothing
+            },
             origin: button
         )
-    }
-
-    // MARK: ActionSheetPicker
-
-    @objc func pickerSuccessAction() {
-        print("Picker success")
-    }
-
-    @objc func pickerCancelAction() {
-        print("Picker cancel")
     }
 }
 
