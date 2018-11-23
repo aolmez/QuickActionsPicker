@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64BCB88D39EC23863079BB78 /* Pods_QuickActionsPicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7E0FA71250C9F0CF27D373 /* Pods_QuickActionsPicker.framework */; };
 		D1F07CFB21A838F900FE83AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F07CFA21A838F900FE83AF /* AppDelegate.swift */; };
 		D1F07CFD21A838F900FE83AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F07CFC21A838F900FE83AF /* ViewController.swift */; };
 		D1F07D0021A838F900FE83AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1F07CFE21A838F900FE83AF /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24CC8AD877EBF1CCAB333C98 /* Pods-QuickActionsPicker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickActionsPicker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickActionsPicker/Pods-QuickActionsPicker.debug.xcconfig"; sourceTree = "<group>"; };
+		6F1CB91C1321668BA020D785 /* Pods-QuickActionsPicker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickActionsPicker.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickActionsPicker/Pods-QuickActionsPicker.release.xcconfig"; sourceTree = "<group>"; };
 		D1F07CF721A838F800FE83AF /* QuickActionsPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickActionsPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F07CFA21A838F900FE83AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1F07CFC21A838F900FE83AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		D1F07D0121A838FB00FE83AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1F07D0421A838FB00FE83AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1F07D0621A838FB00FE83AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE7E0FA71250C9F0CF27D373 /* Pods_QuickActionsPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickActionsPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64BCB88D39EC23863079BB78 /* Pods_QuickActionsPicker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DBFD5FE680B1B69C9D05952 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				24CC8AD877EBF1CCAB333C98 /* Pods-QuickActionsPicker.debug.xcconfig */,
+				6F1CB91C1321668BA020D785 /* Pods-QuickActionsPicker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D1F07CEE21A838F800FE83AF = {
 			isa = PBXGroup;
 			children = (
 				D1F07CF921A838F800FE83AF /* QuickActionsPicker */,
 				D1F07CF821A838F800FE83AF /* Products */,
+				3DBFD5FE680B1B69C9D05952 /* Pods */,
+				E14AB5B4C352E94E29CB318D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = QuickActionsPicker;
 			sourceTree = "<group>";
 		};
+		E14AB5B4C352E94E29CB318D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE7E0FA71250C9F0CF27D373 /* Pods_QuickActionsPicker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1F07D0921A838FB00FE83AF /* Build configuration list for PBXNativeTarget "QuickActionsPicker" */;
 			buildPhases = (
+				D82BD0FFBCAA78C07B76AB40 /* [CP] Check Pods Manifest.lock */,
 				D1F07CF321A838F800FE83AF /* Sources */,
 				D1F07CF421A838F800FE83AF /* Frameworks */,
 				D1F07CF521A838F800FE83AF /* Resources */,
+				A6FCFA7340FE79AF4A8A169D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A6FCFA7340FE79AF4A8A169D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QuickActionsPicker/Pods-QuickActionsPicker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionSheetPicker_3_0.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickActionsPicker/Pods-QuickActionsPicker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D82BD0FFBCAA78C07B76AB40 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QuickActionsPicker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D1F07CF321A838F800FE83AF /* Sources */ = {
@@ -280,6 +345,7 @@
 		};
 		D1F07D0A21A838FB00FE83AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24CC8AD877EBF1CCAB333C98 /* Pods-QuickActionsPicker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +364,7 @@
 		};
 		D1F07D0B21A838FB00FE83AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F1CB91C1321668BA020D785 /* Pods-QuickActionsPicker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
