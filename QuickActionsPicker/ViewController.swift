@@ -12,11 +12,8 @@ import ActionSheetPicker_3_0
 final class ViewController: UIViewController {
     @IBOutlet private var button: UIButton!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     @IBAction func buttonTapped() {
+        // Prepare data for putting into pickers.
         var rows = [String]()
         for num in stride(from: 10, through: 95, by: 5) {
             rows.append("\(num) g")
@@ -30,6 +27,7 @@ final class ViewController: UIViewController {
             NSAttributedString.Key.font: UIFont(name: "Avenir", size: UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body).pointSize) as Any
         ]
 
+        /// Declare a picker var to be used in the Quick Actions closure.
         var asPicker: ActionSheetStringPicker?
 
         let quickPanel = QuickActionsPicker(items: quickActions, separator: "|", fontAttributes: attrs) { [weak self] qap, item in
@@ -56,6 +54,7 @@ final class ViewController: UIViewController {
             origin: button
         )
 
+        /// Quick Panel Picker's extension for ActionSheetPicker in action.
         quickPanel.attachAndShow(picker: asPicker)
     }
 }
